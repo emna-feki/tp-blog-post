@@ -1,0 +1,29 @@
+<div class="center">
+  <h1>Connexion</h1>
+
+  <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+
+    <h3>Adresse mail</h3>
+    <input type="text"
+           id="email"
+           class="sizeInput"
+           formControlName="email">
+
+    <h3>Mot de passe</h3>
+    <input type="password"
+           id="password"
+           class="sizeInput"
+           formControlName="password">
+
+    <div></div>
+    <button mat-raised-button color="primary" type="submit"
+            [disabled]="signinForm.invalid">Connexion</button>
+    &nbsp; &nbsp;
+    <a href="/signup">Crée un compte</a>
+
+
+  </form>
+
+  <p class="text-danger">{{ errorMessage }}</p>
+
+</div>

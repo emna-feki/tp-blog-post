@@ -4,6 +4,8 @@
     "codelyzer"
   ],
   "rules": {
+    "import-spacing": false,
+    "no-trailing-whitespace": false,
     "array-type": false,
     "arrow-parens": false,
     "deprecation": {

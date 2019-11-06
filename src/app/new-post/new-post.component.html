@@ -1,0 +1,15 @@
+<div class="center">
+  <h1>Nouveau Post</h1>
+  <form [formGroup]="postForm" (ngSubmit)="onSavePost()">
+
+  <h3>Titre</h3>
+    <input type="text" id="titre" formControlName="titre" class="sizeInput">
+  <h3>Description</h3>
+    <textarea id="description" formControlName="description" class="sizeTextarea"></textarea>
+
+    <div></div>
+
+    <button mat-raised-button color="primary" [disabled]="postForm.invalid" type="submit">Soumettre</button>
+
+  </form>
+</div>

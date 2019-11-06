@@ -1,0 +1,20 @@
+<div class="margin">
+
+  <div class="posts">Posts</div>
+
+  <div class="contenu">
+
+    <div *ngFor="let post of postsModel; let i = index" class="postition-bloc">
+       <app-affiche-post [postModel]="post">
+<!--        [titrePost]="post.titre"-->
+<!--        [descriptionPost]="post.description"-->
+<!--        [index]="i">-->
+
+        </app-affiche-post>
+
+
+
+  </div>
+  </div>
+
+</div>

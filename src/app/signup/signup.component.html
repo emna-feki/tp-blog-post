@@ -1,0 +1,28 @@
+<div class="center">
+  <h1>Crée un compte</h1>
+
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+
+    <h3>Adresse mail</h3>
+    <input type="text"
+           id="email"
+           class="sizeInput"
+           formControlName="email">
+
+     <h3>Mot de passe</h3>
+    <input type="password"
+           id="password"
+           class="sizeInput"
+           formControlName="password">
+
+<div></div>
+    <button mat-raised-button color="primary" type="submit"
+            [disabled]="signupForm.invalid">Créer mon compte</button>
+
+
+  </form>
+
+<!--  TODO Cours => Réactive form => Validator-->
+  <p class="text-danger">{{ errorMessage }}</p>
+
+</div>
