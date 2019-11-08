@@ -1,15 +1,17 @@
 import {
   Component,
   Input,
-  OnInit,
-}                      from '@angular/core';
+  OnInit, OnDestroy
+}                       from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
-}                      from '@angular/forms';
-import { Router }      from '@angular/router';
-import { PostModel }   from '../models/post.model';
-import { PostService } from '../services/post.service';
+}                       from '@angular/forms';
+import { Router }       from '@angular/router';
+import { Subscription } from 'rxjs';
+import { PostModel }    from '../models/post.model';
+import { PostService }  from '../services/post.service';
+
 
 
 @Component({
@@ -73,6 +75,6 @@ export class AffichePostComponent implements OnInit {
   supprimer(post: PostModel) {
     this.postService.removePost(post);
   }
-  
+ 
   
 }

@@ -1,6 +1,6 @@
 import {
   Component,
-  OnInit,
+  OnInit,OnDestroy
 }                       from '@angular/core';
 import { Router }       from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -34,5 +34,9 @@ export class AfficheItemPostComponent implements OnInit {
     this.router.navigate(['/posts', id]);
   }
   
+  // tslint:disable-next-line:use-life-cycle-interface
+  ngOnDestroy() {
+    this.postSubscription.unsubscribe();
+  }
   
 }

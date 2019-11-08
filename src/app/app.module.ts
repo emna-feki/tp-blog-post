@@ -11,6 +11,7 @@ import {
   MatTabsModule,
   MatMenuModule,
 }                                  from '@angular/material';
+import { MatCardModule }           from '@angular/material/card';
 import { BrowserModule }           from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -52,6 +53,7 @@ import { SigninComponent } from './signin/signin.component';
     MatButtonModule,
     MatNativeDateModule,
     MatMenuModule,
+    MatCardModule,
   ],
   providers: [
     PostService,
