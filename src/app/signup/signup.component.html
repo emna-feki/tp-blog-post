@@ -3,27 +3,23 @@
 
   <h1>Crée un compte</h1>
 
+  <div class="example-container">
   <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
 
-    <h3>Adresse mail</h3>
-    <input type="text"
-           id="email"
-           class="sizeInput"
-           formControlName="email">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Adresse mail" id="email" formControlName="email">
+    </mat-form-field>
 
-     <h3>Mot de passe</h3>
-    <input type="password"
-           id="password"
-           class="sizeInput"
-           formControlName="password">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Mot de passe" type="password" id="password" formControlName="password">
+    </mat-form-field>
 
-<div></div>
     <button mat-raised-button color="primary" type="submit"
             [disabled]="signupForm.invalid">Créer mon compte</button>
 
 
   </form>
-
+  </div>
 <!--  TODO Cours => Réactive form => Validator-->
   <p class="text-danger">{{ errorMessage }}</p>
 

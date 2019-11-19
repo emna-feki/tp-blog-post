@@ -1,15 +1,22 @@
 <div class="center">
   <h1>Nouveau Post</h1>
-  <form [formGroup]="postForm" (ngSubmit)="onSavePost()">
 
-  <h3>Titre</h3>
-    <input type="text" id="titre" formControlName="titre" class="sizeInput">
-  <h3>Description</h3>
-    <textarea id="description" formControlName="description" class="sizeTextarea"></textarea>
+  <div class="example-container">
+    <form [formGroup]="postForm" (ngSubmit)="onSavePost()">
 
-    <div></div>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Titre" id="titre" formControlName="titre">
+      </mat-form-field>
 
-    <button mat-raised-button color="primary" [disabled]="postForm.invalid" type="submit">Soumettre</button>
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Description" id="description" formControlName="description">
+        </textarea>
+      </mat-form-field>
 
-  </form>
+      <button mat-raised-button color="primary" [disabled]="postForm.invalid" type="submit">Soumettre</button>
+
+    </form>
+  </div>
 </div>
+
+

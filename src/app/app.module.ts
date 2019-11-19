@@ -1,8 +1,8 @@
-import { HttpClientModule }        from '@angular/common/http';
-import { NgModule }                from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule }         from '@angular/core';
 import {
   ReactiveFormsModule,
-}                                  from '@angular/forms';
+}                           from '@angular/forms';
 import {
   MatButtonModule,
   MatFormFieldModule,
@@ -10,7 +10,10 @@ import {
   MatSliderModule,
   MatTabsModule,
   MatMenuModule,
-}                                  from '@angular/material';
+  MatInputModule,
+  
+}                           from '@angular/material';
+
 import { MatCardModule }           from '@angular/material/card';
 import { BrowserModule }           from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -48,12 +51,14 @@ import { SigninComponent } from './signin/signin.component';
     
     BrowserAnimationsModule,
     MatSliderModule,
-    MatFormFieldModule,
     MatTabsModule,
     MatButtonModule,
     MatNativeDateModule,
     MatMenuModule,
     MatCardModule,
+    MatInputModule,
+    MatFormFieldModule
+    
   ],
   providers: [
     PostService,
