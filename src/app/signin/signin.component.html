@@ -1,23 +1,24 @@
 <div class="center">
   <h1>Connexion</h1>
   <div class="example-container">
-  <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
 
-    <mat-form-field class="example-full-width">
-      <input matInput placeholder="Adresse mail" id="email" formControlName="email">
-    </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Adresse mail" formControlName="email">
+      </mat-form-field>
 
-    <mat-form-field class="example-full-width">
-      <input matInput placeholder="Mot de passe" type="password" id="password" formControlName="password">
-    </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Mot de passe" type="password" formControlName="password">
+      </mat-form-field>
 
-    <button mat-raised-button color="primary" type="submit"
-            [disabled]="signinForm.invalid">Connexion</button>
-    &nbsp; &nbsp;
-    <a href="/signup">Crée un compte</a>
+      <button mat-raised-button color="primary" type="submit"
+              [disabled]="signinForm.invalid">Connexion
+      </button>
+      &nbsp; &nbsp;
+      <a href="/signup">Crée un compte</a>
 
 
-  </form>
+    </form>
   </div>
 
   <p class="text-danger">{{ errorMessage }}</p>

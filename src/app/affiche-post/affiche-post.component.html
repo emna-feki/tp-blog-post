@@ -1,21 +1,19 @@
 <mat-card>
 
-  <div [ngStyle]="{color:getColor(), backgroundColor:getBackground()}" id="conteneur">
-    <div id="conteneur1">
+  <div [ngStyle]="{color:getColor(), backgroundColor:getBackground()}" class="conteneur">
+    <div class="conteneur1">
       <div class="element1">{{postModel.titre}}</div>
 
       <div class="element2">{{ lastUpdate | date: 'short' }}</div>
     </div>
-    <div id="conteneur2">{{postModel.description}}</div>
+    <div class="conteneur2">{{postModel.description}}</div>
 
-    <div class="example-button-row" id="conteneur3">
-
+    <div class="example-button-row" class="conteneur3">
       <div class="buttPart1">
         <button mat-raised-button color="primary" name="likeIt" (click)="likeIt()">Like IT</button>&nbsp;
         <button mat-raised-button color="warn" name="dontLikeIT" (click)="dontLikeIt()">Don't like IT</button>
       </div>
       <button mat-raised-button color="warn" name="supprimer" (click)="supprimer(postModel)">Supprimer Post</button>
-
     </div>
 
   </div>

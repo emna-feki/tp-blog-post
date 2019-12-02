@@ -1,16 +1,15 @@
 <div class="header">
-<ul>
-  <li routerLinkActive="active"><a routerLink="afficheItemPost">Posts</a></li>
-  <li routerLinkActive="active"><a routerLink="newPost">Ajouter Post</a></li>
-<!--  <li routerLinkActive="active"><a routerLink="signup">Crée un compte</a></li>-->
-  <li routerLinkActive="active"><a routerLink="signin" *ngIf="!isAuth">Connexion</a></li>
-  <li>
-    <a (click)="onSignOut()"
-       style="cursor:pointer"
-       *ngIf="isAuth">Déconnexion</a>
-  </li>
+  <ul>
+    <li routerLinkActive="active"><a routerLink="afficheItemPost">Posts</a></li>
+    <li routerLinkActive="active"><a routerLink="newPost">Ajouter Post</a></li>
+    <li routerLinkActive="active"><a routerLink="signin" *ngIf="!isAuth">Connexion</a></li>
+    <li>
+      <a (click)="onSignOut()"
+         style="cursor:pointer"
+         *ngIf="isAuth">Déconnexion</a>
+    </li>
 
-</ul>
+  </ul>
 </div>
 
 <div class="container">
@@ -18,7 +17,6 @@
     <div class="col-xs-12">
 
       <router-outlet></router-outlet>
-      <!--      //ici je met toutes les routes ce que clicker mel fouk-->
 
     </div>
   </div>

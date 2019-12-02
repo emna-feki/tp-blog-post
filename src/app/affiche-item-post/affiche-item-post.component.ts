@@ -34,7 +34,6 @@ export class AfficheItemPostComponent implements OnInit {
     this.router.navigate(['/posts', id]);
   }
   
-  // tslint:disable-next-line:use-life-cycle-interface
   ngOnDestroy() {
     this.postSubscription.unsubscribe();
   }

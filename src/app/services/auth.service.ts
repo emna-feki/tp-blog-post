@@ -14,9 +14,9 @@ export class AuthService {
           },
           (error) => {
             reject(error);
-          }
+          },
         );
-      }
+      },
     );
   }
   
@@ -29,9 +29,9 @@ export class AuthService {
           },
           (error) => {
             reject(error);
-          }
+          },
         );
-      }
+      },
     );
   }
   
