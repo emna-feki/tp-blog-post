@@ -24,18 +24,18 @@ import { AffichePostComponent }     from './affiche-post/affiche-post.component'
 import { AuthGuardService }         from './services/auth-guard.service';
 import { AuthService }              from './services/auth.service';
 import { PostService }              from './services/post.service';
-import { AfficheItemPostComponent } from './affiche-item-post/affiche-item-post.component';
+import { AfficheListPostComponent } from './affiche-list-post/affiche-list-post.component';
 import { NewPostComponent }         from './new-post/new-post.component';
 import { HeaderComponent }          from './header/header.component';
 import { SignupComponent }          from './signup/signup.component';
 import { FourOhFourComponent }      from './four-oh-four/four-oh-four.component';
-import { SigninComponent } from './signin/signin.component';
+import { SigninComponent }          from './signin/signin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AffichePostComponent,
-    AfficheItemPostComponent,
+    AfficheListPostComponent,
     NewPostComponent,
     HeaderComponent,
     SignupComponent,

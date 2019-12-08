@@ -10,7 +10,7 @@ import * as firebase from 'firebase';
 export class AppComponent {
   
   constructor() {
-    const firebaseConfig = {
+    firebase.initializeApp({
       apiKey: 'AIzaSyCgj1G_S-uGfoudlOx0q5M_Jhmq6wbVsCU',
       authDomain: 'tp-blog-posts.firebaseapp.com',
       databaseURL: 'https://tp-blog-posts.firebaseio.com',
@@ -19,18 +19,6 @@ export class AppComponent {
       messagingSenderId: '944657727798',
       appId: '1:944657727798:web:48cf91f1f363b80304b397',
       measurementId: 'G-4VKF6HK06B'
-    };
-    firebase.initializeApp(firebaseConfig);
+    });
   }
 }
-  // constructor() {
-  //   const config = {
-  //     apiKey: 'AIzaSyCNA1LcE9i42AtLAREwDs4pGkPBcA2t6cs',
-  //     authDomain: 'app-compl-angular.firebaseapp.com',
-  //     databaseURL: 'https://app-compl-angular.firebaseio.com/',
-  //     projectId: 'app-compl-angular\n',
-  //     storageBucket: 'app-compl-angular.appspot.com',
-  //     messagingSenderId: '839835867611'
-  //   };
-  //   firebase.initializeApp(config);
-  // }}

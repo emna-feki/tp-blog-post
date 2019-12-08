@@ -9,7 +9,7 @@ import {
   RouterModule,
   Routes,
 }                                   from '@angular/router';
-import { AfficheItemPostComponent } from './affiche-item-post/affiche-item-post.component';
+import { AfficheListPostComponent } from './affiche-list-post/affiche-list-post.component';
 import { AffichePostComponent }     from './affiche-post/affiche-post.component';
 import { FourOhFourComponent }      from './four-oh-four/four-oh-four.component';
 import { NewPostComponent }         from './new-post/new-post.component';
@@ -19,11 +19,11 @@ import { SignupComponent }          from './signup/signup.component';
 
 const routes: Routes = [
   { path: 'affichePost' , canActivate: [AuthGuardService], component: AffichePostComponent },
-  { path: 'afficheItemPost' , canActivate: [AuthGuardService], component: AfficheItemPostComponent},
+  { path: 'afficheItemPost' , canActivate: [AuthGuardService], component: AfficheListPostComponent},
   { path: 'newPost' , canActivate: [AuthGuardService], component: NewPostComponent},
   { path: 'signup' , component: SignupComponent},
   { path: 'signin' , component: SigninComponent},
-  { path: '' , component: AfficheItemPostComponent},
+  { path: '' , component: AfficheListPostComponent},
   { path: 'not-found', component: FourOhFourComponent },
   { path: '**', redirectTo: 'not-found' }
 ];

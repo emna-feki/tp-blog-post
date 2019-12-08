@@ -35,11 +35,8 @@ export class NewPostComponent implements OnInit {
   onSavePost() {
     const titre = this.postForm.get('titre').value;
     const description = this.postForm.get('description').value;
-    const nbrLike = 0;
-    const nbrDontLike = 0;
   
-  
-    const newPost = new PostModel(titre, description, nbrLike, nbrDontLike);
+    const newPost = new PostModel(titre, description);
 
     this.postService.createNewPost(newPost);
     this.router.navigate(['/afficheItemPost']);

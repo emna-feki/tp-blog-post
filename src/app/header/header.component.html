@@ -4,20 +4,10 @@
     <li routerLinkActive="active"><a routerLink="newPost">Ajouter Post</a></li>
     <li routerLinkActive="active"><a routerLink="signin" *ngIf="!isAuth">Connexion</a></li>
     <li>
-      <a (click)="onSignOut()"
-         style="cursor:pointer"
+      <a class="mouse-icon" (click)="onSignOut()"
          *ngIf="isAuth">Déconnexion</a>
     </li>
-
   </ul>
+
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-
-      <router-outlet></router-outlet>
-
-    </div>
-  </div>
-</div>
