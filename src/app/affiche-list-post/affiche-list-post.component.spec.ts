@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AfficheItemPostComponent } from './affiche-item-post.component';
+import { AfficheListPostComponent } from './affiche-list-post.component';
 
-describe('AfficheItemPostComponent', () => {
-  let component: AfficheItemPostComponent;
-  let fixture: ComponentFixture<AfficheItemPostComponent>;
+describe('AfficheListPostComponent', () => {
+  let component: AfficheListPostComponent;
+  let fixture: ComponentFixture<AfficheListPostComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AfficheItemPostComponent ]
+      declarations: [ AfficheListPostComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AfficheItemPostComponent);
+    fixture = TestBed.createComponent(AfficheListPostComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

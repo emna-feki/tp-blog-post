@@ -10,10 +10,10 @@ import { PostService }  from '../services/post.service';
 
 @Component({
   selector: 'app-affiche-item-post',
-  templateUrl: './affiche-item-post.component.html',
-  styleUrls: ['./affiche-item-post.component.scss'],
+  templateUrl: './affiche-list-post.component.html',
+  styleUrls: ['./affiche-list-post.component.scss'],
 })
-export class AfficheItemPostComponent implements OnInit {
+export class AfficheListPostComponent implements OnInit {
   
   postsModel: PostModel[];
   postSubscription: Subscription;
