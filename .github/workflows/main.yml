@@ -1,0 +1,17 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: get dependancies
+      run: npm i
+    - name: Build app
+      run: ng build --prod
+    - name: Deploy app
+      run: firebase deploy
