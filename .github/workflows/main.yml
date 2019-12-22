@@ -10,9 +10,9 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v1
       - name: Install Dependencies
-        run: npm install
-      - name: Install Angular/cli
-        run: npm install @angular/cli
+        run: |
+          npm install
+          npm install @angular/cli
       - name: Build
         run: npx ng build --prod
       - name: Archive Production Artifact
