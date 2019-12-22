@@ -16,6 +16,7 @@ import { NewPostComponent }         from './new-post/new-post.component';
 import { AuthGuardService }         from './services/auth-guard.service';
 import { SigninComponent }          from './signin/signin.component';
 import { SignupComponent }          from './signup/signup.component';
+import {MpOublieComponent}          from './mp-oublie/mp-oublie.component';
 
 const routes: Routes = [
   { path: 'affichePost' , canActivate: [AuthGuardService], component: AffichePostComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'newPost' , canActivate: [AuthGuardService], component: NewPostComponent},
   { path: 'signup' , component: SignupComponent},
   { path: 'signin' , component: SigninComponent},
+  { path: 'mpOublie', component: MpOublieComponent},
   { path: '' , component: AfficheListPostComponent},
   { path: 'not-found', component: FourOhFourComponent },
   { path: '**', redirectTo: 'not-found' }

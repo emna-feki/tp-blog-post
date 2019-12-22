@@ -1,21 +1,52 @@
 <h1 mat-dialog-title>Mot de passe oublié</h1>
 <div mat-dialog-content>
-
     <ul>
         <mat-form-field class="example-full-width">
-            <input matInput placeholder="Adresse mail" name="email">
+            <input matInput placeholder="Adresse mail" [(ngModel)]="email">
         </mat-form-field>
     </ul>
+
     <ul>
-        <button mat-raised-button
-                (click)="mpOublie('emna.mezghanni@gmail.com')">Envoyé
+        <button mat-raised-button (click)="mpOublie()">
+            Envoyé
         </button>
-
-
-
     </ul>
 
     <ul>
         <button mat-raised-button mat-dialog-close>Cancel</button>
     </ul>
+
+
+    <!--    <form [formGroup]="mpOublierForm">-->
+
+    <!--        <ul>-->
+    <!--            <mat-form-field class="example-full-width">-->
+    <!--                <input matInput placeholder="Adresse mail" formControlName="email">-->
+    <!--            </mat-form-field>-->
+    <!--        </ul>-->
+
+    <!--        <ul>-->
+    <!--            <button mat-raised-button-->
+    <!--                    (click)="mpOublie()">Envoyé-->
+    <!--            </button>-->
+    <!--        </ul>-->
+
+    <!--        <ul>-->
+    <!--            <button mat-raised-button mat-dialog-close>Cancel</button>-->
+    <!--        </ul>-->
+    <!--    </form>-->
+
+    <!--   //////////////////////////////// -->
+    <!--    <input [(ngModel)]="name">-->
+    <!--    <button (click)="setValue()">Set value</button>-->
+    <!--    <p>Value: {{ name }}</p>-->
+
+    <!--    //////////////////////////////-->
+    <!--    <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>-->
+    <!--        <input name="first" ngModel>-->
+    <!--        <button>Submit</button>-->
+    <!--    </form>-->
+    <!--    //////////////////////////-->
+
+
 </div>

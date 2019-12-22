@@ -1,8 +1,9 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule }         from '@angular/core';
 import {
+  FormsModule,
   ReactiveFormsModule,
-}                           from '@angular/forms';
+} from '@angular/forms';
 import {
   MatButtonModule,
   MatFormFieldModule,
@@ -30,6 +31,8 @@ import { HeaderComponent }          from './header/header.component';
 import { SignupComponent }          from './signup/signup.component';
 import { FourOhFourComponent }      from './four-oh-four/four-oh-four.component';
 import { SigninComponent }          from './signin/signin.component';
+import { MpOublieComponent } from './mp-oublie/mp-oublie.component';
+import {MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -41,14 +44,16 @@ import { SigninComponent }          from './signin/signin.component';
     SignupComponent,
     FourOhFourComponent,
     SigninComponent,
+    MpOublieComponent,
+
   ],
   imports: [
-    
+
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    
+
     BrowserAnimationsModule,
     MatSliderModule,
     MatTabsModule,
@@ -57,13 +62,17 @@ import { SigninComponent }          from './signin/signin.component';
     MatMenuModule,
     MatCardModule,
     MatInputModule,
-    MatFormFieldModule
-    
+    MatFormFieldModule,
+    FormsModule,
+    MatDialogModule
+
   ],
   providers: [
     PostService,
     AuthService,
-    AuthGuardService
+    AuthGuardService,
+    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}
+
   ],
   bootstrap: [AppComponent],
 })
