@@ -10,17 +10,19 @@
       <mat-form-field class="example-full-width">
         <input matInput placeholder="Mot de passe" type="password" formControlName="password">
       </mat-form-field>
-
       <button mat-raised-button color="primary" type="submit"
               [disabled]="signinForm.invalid">Connexion
       </button>
-      &nbsp; &nbsp;
+      &nbsp;
       <a href="/signup">Crée un compte</a>
 
-
     </form>
+    &nbsp;
+    <button mat-raised-button (click)="openDialog()">Mp oublié</button>
+
   </div>
-
   <p class="text-danger">{{ errorMessage }}</p>
-
 </div>
+
+
+
