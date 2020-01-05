@@ -1,27 +1,27 @@
 <div class="center">
-    <h1>Connexion</h1>
-    <div class="example-container">
-        <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+  <h1>Connexion</h1>
+  <div class="example-container">
+    <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
 
-            <mat-form-field class="example-full-width">
-                <input matInput placeholder="Adresse mail" formControlName="email">
-            </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Adresse mail" formControlName="email">
+      </mat-form-field>
 
-            <mat-form-field class="example-full-width">
-                <input matInput placeholder="Mot de passe" type="password" formControlName="password">
-            </mat-form-field>
-            <button mat-raised-button color="primary" type="submit"
-                    [disabled]="signinForm.invalid">Connexion
-            </button>
-            &nbsp;
-            <a href="/signup">Crée un compte</a>
-
-        </form>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Mot de passe" type="password" formControlName="password">
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit"
+              [disabled]="signinForm.invalid">Connexion
+      </button>
       &nbsp;
-      <button mat-raised-button (click)="openDialog()">Mp oublié</button>
+      <a href="/signup">Crée un compte</a>
 
-    </div>
-    <p class="text-danger">{{ errorMessage }}</p>
+    </form>
+    &nbsp;
+    <button mat-raised-button (click)="openDialog()">Mp oublié</button>
+
+  </div>
+  <p class="text-danger">{{ errorMessage }}</p>
 </div>
 
 

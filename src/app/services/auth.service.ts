@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
 import * as firebase from 'firebase';
 
@@ -42,9 +42,10 @@ export class AuthService {
   }
 
   resetPassword(email: string) {
-    return firebase.auth().sendPasswordResetEmail(email)
-               .then(() => console.log('email sent'))
-               .catch((error) => console.log(error));
+    return firebase.auth()
+                   .sendPasswordResetEmail(email)
+                   .then(() => console.log('email sent'))
+                   .catch((error) => console.log(error));
   }
 }
 
